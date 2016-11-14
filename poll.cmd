@@ -39,9 +39,9 @@ Else Do
       Flavor = Word(FlavSym, word)
       !okflavor = 'OK'
     End
+    If !okflavor \= 'OK' Then Call Usage
   End
 End
-If !okflavor \= 'OK' Then Call Usage
 Flavor = Flavor || FlavorSuffix
 Parse Var Address Zone ':' Net '/' Node '.' Point
 If CheckNum() = 0 Then Call Usage
